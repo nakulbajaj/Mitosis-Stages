@@ -1,0 +1,978 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController wantsFullScreenLayout="YES" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="The Stages of Cells" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tw2-9r-rFn">
+                                <rect key="frame" x="142" y="20" width="317" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJ0-vP-aJZ">
+                                <rect key="frame" x="259" y="340" width="82" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Interphase"/>
+                                <connections>
+                                    <segue destination="yUD-zg-6v9" kind="presentation" modalTransitionStyle="coverVertical" id="TD6-xc-i3L"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0rP-WG-TDS">
+                                <rect key="frame" x="273" y="403" width="55" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Mitosis"/>
+                                <connections>
+                                    <segue destination="7lp-H7-i8v" kind="presentation" modalTransitionStyle="coverVertical" id="xfK-Iv-kT8"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="CellCycleOverview" translatesAutoresizingMaskIntoConstraints="NO" id="JVm-gA-7b8">
+                                <rect key="frame" x="221" y="114" width="158" height="161"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JVm-gA-7b8" secondAttribute="height" multiplier="50:51" id="2Fw-gR-fCN"/>
+                                    <constraint firstAttribute="width" secondItem="JVm-gA-7b8" secondAttribute="height" multiplier="50:51" id="CfR-Ni-5z5"/>
+                                    <constraint firstAttribute="width" secondItem="JVm-gA-7b8" secondAttribute="height" multiplier="50:51" id="FAG-1C-Zj6"/>
+                                    <constraint firstAttribute="width" secondItem="JVm-gA-7b8" secondAttribute="height" multiplier="86:101" id="NGS-Og-eai"/>
+                                    <constraint firstAttribute="width" secondItem="JVm-gA-7b8" secondAttribute="height" multiplier="158:161" id="bGA-w4-gj5"/>
+                                    <constraint firstAttribute="width" secondItem="JVm-gA-7b8" secondAttribute="height" multiplier="50:51" id="srY-xE-h1V"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2Fw-gR-fCN"/>
+                                        <exclude reference="CfR-Ni-5z5"/>
+                                        <exclude reference="FAG-1C-Zj6"/>
+                                        <exclude reference="NGS-Og-eai"/>
+                                        <exclude reference="srY-xE-h1V"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJD-6h-pcG">
+                                <rect key="frame" x="232" y="73" width="136" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="General Overview"/>
+                                <connections>
+                                    <segue destination="B9q-rw-O5D" kind="popoverPresentation" popoverAnchorView="GJD-6h-pcG" id="cML-cL-ddS">
+                                        <segue key="commit" inheritsFrom="parent" id="rwi-cj-bDx"/>
+                                        <segue key="preview" inheritsFrom="commit" id="Or3-fS-6bu"/>
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a section to begin with:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="win-cs-5Ds">
+                                <rect key="frame" x="180" y="289" width="241" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bgc-6K-jxd">
+                                <rect key="frame" x="256" y="466" width="88" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Cytokenisis"/>
+                                <connections>
+                                    <segue destination="gdY-P0-OZg" kind="presentation" modalTransitionStyle="coverVertical" id="4Mu-v8-KjZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.50588235294117645" green="0.95294117647058818" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="tw2-9r-rFn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0CS-Wa-9to"/>
+                            <constraint firstItem="JVm-gA-7b8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3hN-Z5-0IJ"/>
+                            <constraint firstItem="JVm-gA-7b8" firstAttribute="top" secondItem="bJ0-vP-aJZ" secondAttribute="bottom" constant="8" id="4xj-tU-dTK"/>
+                            <constraint firstItem="GJD-6h-pcG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Ou-E0-tY1"/>
+                            <constraint firstItem="bJ0-vP-aJZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Pg-0o-wmv"/>
+                            <constraint firstItem="JVm-gA-7b8" firstAttribute="top" secondItem="bJ0-vP-aJZ" secondAttribute="bottom" constant="-2" id="5vR-Im-LFD"/>
+                            <constraint firstItem="0rP-WG-TDS" firstAttribute="top" secondItem="bJ0-vP-aJZ" secondAttribute="bottom" constant="30" id="83V-gM-htE"/>
+                            <constraint firstItem="JVm-gA-7b8" firstAttribute="top" secondItem="bJ0-vP-aJZ" secondAttribute="bottom" constant="42" id="8e7-jM-uxM"/>
+                            <constraint firstItem="JVm-gA-7b8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8f2-DE-SnI"/>
+                            <constraint firstItem="Bgc-6K-jxd" firstAttribute="centerX" secondItem="bJ0-vP-aJZ" secondAttribute="centerX" id="8oM-RE-HZX"/>
+                            <constraint firstItem="win-cs-5Ds" firstAttribute="top" secondItem="JVm-gA-7b8" secondAttribute="bottom" constant="14" id="9Ad-zY-hmX"/>
+                            <constraint firstItem="win-cs-5Ds" firstAttribute="top" secondItem="JVm-gA-7b8" secondAttribute="bottom" constant="8" id="BEa-Y5-avr"/>
+                            <constraint firstItem="JVm-gA-7b8" firstAttribute="top" secondItem="bJ0-vP-aJZ" secondAttribute="bottom" constant="8" id="C32-iY-ESg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JVm-gA-7b8" secondAttribute="bottom" constant="20" id="D3P-Zq-a2E"/>
+                            <constraint firstItem="Bgc-6K-jxd" firstAttribute="centerX" secondItem="0rP-WG-TDS" secondAttribute="centerX" id="E4Q-R2-eeS"/>
+                            <constraint firstItem="bJ0-vP-aJZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="GJD-6h-pcG" secondAttribute="bottom" constant="8" id="Ge6-Te-Skl"/>
+                            <constraint firstItem="JVm-gA-7b8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HiH-Kx-EUi"/>
+                            <constraint firstItem="bJ0-vP-aJZ" firstAttribute="top" secondItem="JVm-gA-7b8" secondAttribute="bottom" constant="8" id="O35-iX-KEx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JVm-gA-7b8" secondAttribute="trailing" id="PHx-db-mHe"/>
+                            <constraint firstItem="tw2-9r-rFn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="RyB-eT-VKJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JVm-gA-7b8" secondAttribute="bottom" id="Uej-2s-0Un"/>
+                            <constraint firstItem="Bgc-6K-jxd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V5H-Gc-DfD"/>
+                            <constraint firstItem="bJ0-vP-aJZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VhW-MB-sMU"/>
+                            <constraint firstItem="JVm-gA-7b8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VoK-cf-nem"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JVm-gA-7b8" secondAttribute="bottom" id="bJi-kB-15a"/>
+                            <constraint firstItem="bJ0-vP-aJZ" firstAttribute="top" secondItem="JVm-gA-7b8" secondAttribute="bottom" constant="8" id="cX5-a5-fZZ"/>
+                            <constraint firstItem="bJ0-vP-aJZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dAX-FC-Xsf"/>
+                            <constraint firstItem="win-cs-5Ds" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="djN-z7-5AK"/>
+                            <constraint firstItem="win-cs-5Ds" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fWN-tF-6Lv"/>
+                            <constraint firstItem="bJ0-vP-aJZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gO5-ql-vTV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JVm-gA-7b8" secondAttribute="bottom" constant="8" id="gc8-5o-FFz"/>
+                            <constraint firstItem="JVm-gA-7b8" firstAttribute="top" secondItem="GJD-6h-pcG" secondAttribute="bottom" constant="8" id="hOC-Hg-74r"/>
+                            <constraint firstItem="win-cs-5Ds" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hP0-oB-QzU"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="JVm-gA-7b8" secondAttribute="leading" id="ihw-MJ-BA1"/>
+                            <constraint firstItem="GJD-6h-pcG" firstAttribute="top" secondItem="tw2-9r-rFn" secondAttribute="bottom" constant="8" id="inA-K3-OK9"/>
+                            <constraint firstItem="JVm-gA-7b8" firstAttribute="top" secondItem="GJD-6h-pcG" secondAttribute="bottom" constant="8" id="ixg-Mn-euw"/>
+                            <constraint firstItem="win-cs-5Ds" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jK9-ax-4vI"/>
+                            <constraint firstItem="JVm-gA-7b8" firstAttribute="top" secondItem="bJ0-vP-aJZ" secondAttribute="bottom" constant="8" id="jrk-Ti-AKT"/>
+                            <constraint firstItem="Bgc-6K-jxd" firstAttribute="top" secondItem="0rP-WG-TDS" secondAttribute="bottom" constant="30" id="kKZ-RD-Zqy"/>
+                            <constraint firstItem="bJ0-vP-aJZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lDh-Qd-FgI"/>
+                            <constraint firstItem="JVm-gA-7b8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="liJ-A2-Mm9"/>
+                            <constraint firstItem="JVm-gA-7b8" firstAttribute="top" secondItem="bJ0-vP-aJZ" secondAttribute="bottom" constant="8" id="mau-99-nkR"/>
+                            <constraint firstItem="win-cs-5Ds" firstAttribute="centerX" secondItem="JVm-gA-7b8" secondAttribute="centerX" id="oF2-dO-LRc"/>
+                            <constraint firstItem="JVm-gA-7b8" firstAttribute="top" secondItem="bJ0-vP-aJZ" secondAttribute="bottom" constant="8" id="pOX-Hl-Apa"/>
+                            <constraint firstItem="0rP-WG-TDS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tb9-Az-Udw"/>
+                            <constraint firstItem="bJ0-vP-aJZ" firstAttribute="top" secondItem="GJD-6h-pcG" secondAttribute="bottom" constant="8" id="woN-CJ-B1D"/>
+                            <constraint firstItem="win-cs-5Ds" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="269" id="xR1-yc-zjY"/>
+                            <constraint firstItem="bJ0-vP-aJZ" firstAttribute="top" secondItem="win-cs-5Ds" secondAttribute="bottom" constant="30" id="yw6-SE-VOm"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4xj-tU-dTK"/>
+                                <exclude reference="5vR-Im-LFD"/>
+                                <exclude reference="8e7-jM-uxM"/>
+                                <exclude reference="8f2-DE-SnI"/>
+                                <exclude reference="C32-iY-ESg"/>
+                                <exclude reference="HiH-Kx-EUi"/>
+                                <exclude reference="PHx-db-mHe"/>
+                                <exclude reference="VoK-cf-nem"/>
+                                <exclude reference="ihw-MJ-BA1"/>
+                                <exclude reference="ixg-Mn-euw"/>
+                                <exclude reference="jrk-Ti-AKT"/>
+                                <exclude reference="liJ-A2-Mm9"/>
+                                <exclude reference="mau-99-nkR"/>
+                                <exclude reference="pOX-Hl-Apa"/>
+                                <exclude reference="BEa-Y5-avr"/>
+                                <exclude reference="fWN-tF-6Lv"/>
+                                <exclude reference="jK9-ax-4vI"/>
+                                <exclude reference="oF2-dO-LRc"/>
+                                <exclude reference="xR1-yc-zjY"/>
+                                <exclude reference="5Pg-0o-wmv"/>
+                                <exclude reference="Ge6-Te-Skl"/>
+                                <exclude reference="O35-iX-KEx"/>
+                                <exclude reference="VhW-MB-sMU"/>
+                                <exclude reference="cX5-a5-fZZ"/>
+                                <exclude reference="dAX-FC-Xsf"/>
+                                <exclude reference="gO5-ql-vTV"/>
+                                <exclude reference="woN-CJ-B1D"/>
+                                <exclude reference="8oM-RE-HZX"/>
+                                <exclude reference="E4Q-R2-eeS"/>
+                                <exclude reference="D3P-Zq-a2E"/>
+                                <exclude reference="Uej-2s-0Un"/>
+                                <exclude reference="bJi-kB-15a"/>
+                                <exclude reference="gc8-5o-FFz"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="266" y="289"/>
+        </scene>
+        <!--Mitosis Over View Controller-->
+        <scene sceneID="GeM-An-qig">
+            <objects>
+                <viewController id="B9q-rw-O5D" customClass="MitosisOverViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kHf-ZK-czX"/>
+                        <viewControllerLayoutGuide type="bottom" id="fHA-rk-hzu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dx8-iO-m16">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Read More:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXU-5E-rCk">
+                                <rect key="frame" x="256" y="497" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lYb-CI-nYY">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <color key="backgroundColor" red="0.84313725490000002" green="0.84313725490000002" blue="0.84313725490000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <barButtonItem title="Back" id="Olz-XQ-wI8">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="popoverPresentation" popoverAnchorBarButtonItem="Olz-XQ-wI8" id="X1P-fZ-lU4">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pMr-hk-1XA">
+                                <rect key="frame" x="211" y="526" width="178" height="30"/>
+                                <state key="normal" title="Cell Cycle Wikipedia Page"/>
+                                <connections>
+                                    <action selector="WikiPage" destination="B9q-rw-O5D" eventType="touchUpInside" id="JpQ-hI-nDt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The cell cycle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="koI-GL-27K">
+                                <rect key="frame" x="189" y="28" width="223" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K1M-k6-YqK">
+                                <rect key="frame" x="0.0" y="81" width="600" height="408"/>
+                                <color key="backgroundColor" red="0.84313725490000002" green="0.84313725490000002" blue="0.84313725490000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">The cycle of the life of a cell is completely cyclical, and like a human, it is "born" and then dies. A cell goes through three general steps in their cycle. They will first divide, grow, copy their DNA, and then restart the cycle. These stages are extremely subjective and don't have a specific time margin. Biologists cannot give a specific time margin because it would be the equivalent of knowing when your childhood would end and adulthood start. Every cell in your body is always at a specific stage in its cycle.
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="24" name="HelveticaNeue-Thin"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+The citations for this application project are Dr. Artiss's science powerpoint on Athena and the Whittier Union High School District's powerpoint on Interphase, Mitosis, and Cytokinesis.</string>
+                                        <attributes>
+                                            <font key="NSFont" size="24" name="HelveticaNeue-Thin"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.84313725490196079" green="0.84313725490196079" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="K1M-k6-YqK" secondAttribute="trailing" constant="-20" id="1AA-Ms-1L7"/>
+                            <constraint firstItem="pMr-hk-1XA" firstAttribute="top" secondItem="jXU-5E-rCk" secondAttribute="bottom" constant="8" id="3gO-A5-fVE"/>
+                            <constraint firstItem="lYb-CI-nYY" firstAttribute="top" secondItem="pMr-hk-1XA" secondAttribute="bottom" id="Fep-eh-Vux"/>
+                            <constraint firstItem="K1M-k6-YqK" firstAttribute="top" secondItem="koI-GL-27K" secondAttribute="bottom" constant="8" id="Glb-dR-Xeq"/>
+                            <constraint firstItem="lYb-CI-nYY" firstAttribute="leading" secondItem="Dx8-iO-m16" secondAttribute="leading" id="KHS-hZ-HXC"/>
+                            <constraint firstItem="koI-GL-27K" firstAttribute="centerX" secondItem="Dx8-iO-m16" secondAttribute="centerX" id="Mvu-X5-JwE"/>
+                            <constraint firstItem="jXU-5E-rCk" firstAttribute="top" secondItem="K1M-k6-YqK" secondAttribute="bottom" constant="8" id="NE2-Jp-jSR"/>
+                            <constraint firstItem="jXU-5E-rCk" firstAttribute="centerX" secondItem="Dx8-iO-m16" secondAttribute="centerX" id="OBT-wM-WaX"/>
+                            <constraint firstItem="K1M-k6-YqK" firstAttribute="leading" secondItem="Dx8-iO-m16" secondAttribute="leadingMargin" constant="-20" id="RQP-Bq-xjw"/>
+                            <constraint firstItem="fHA-rk-hzu" firstAttribute="top" secondItem="pMr-hk-1XA" secondAttribute="bottom" constant="20" id="WMr-69-quJ"/>
+                            <constraint firstItem="lYb-CI-nYY" firstAttribute="bottom" secondItem="fHA-rk-hzu" secondAttribute="top" id="XxL-aU-tp2"/>
+                            <constraint firstItem="lYb-CI-nYY" firstAttribute="centerX" secondItem="Dx8-iO-m16" secondAttribute="centerX" id="YwY-Hz-mrD"/>
+                            <constraint firstItem="pMr-hk-1XA" firstAttribute="top" secondItem="jXU-5E-rCk" secondAttribute="bottom" constant="8" symbolic="YES" id="fyq-f3-reP"/>
+                            <constraint firstItem="pMr-hk-1XA" firstAttribute="top" secondItem="jXU-5E-rCk" secondAttribute="bottom" constant="8" id="sVZ-Tb-RHt"/>
+                            <constraint firstItem="koI-GL-27K" firstAttribute="top" secondItem="kHf-ZK-czX" secondAttribute="bottom" constant="8" id="tS0-eg-U1H"/>
+                            <constraint firstItem="pMr-hk-1XA" firstAttribute="centerX" secondItem="Dx8-iO-m16" secondAttribute="centerX" id="tgu-gd-PKa"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3gO-A5-fVE"/>
+                                <exclude reference="sVZ-Tb-RHt"/>
+                                <exclude reference="WMr-69-quJ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="CellCycleInfo" destination="K1M-k6-YqK" id="Kx7-5w-Hey"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JoB-mv-4hx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="896" y="192"/>
+        </scene>
+        <!--Interphase View Controller-->
+        <scene sceneID="9QE-tm-uOF">
+            <objects>
+                <viewController storyboardIdentifier="Interphase" id="yUD-zg-6v9" customClass="InterphaseViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="A3W-kD-gPm"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wgp-E5-FfQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Md6-4W-vwS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Pju-I6-MC9">
+                                <rect key="frame" x="281" y="555" width="39" height="37"/>
+                            </pageControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5P-T1-gPj">
+                                <rect key="frame" x="0.0" y="74" width="600" height="473"/>
+                                <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Main Definition: the period during the cell cycle between cell divisions, during which DNA replication and protein synthesis take place.
+
+Interphase receives it's name as it is literally when a cell remains idle for the ultimate stage of division. The interphase is really split up into three different substages:
+	-G1 Phase
+	-S Phase
+	-G2 Phase
+
+The G stands for either gap or growth (your choice) and the S stands for Synthesis. 
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="24" name="HelveticaNeue-Thin"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">G1 Phase
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="24" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">The G1 Phase consists is a cell's "normal" resting period, when it makes it's proteins and carries out its necessary tasks, kind of like when humans are middle aged and do their normal stuff in sometimes an extremely monotonous way: get up, go to work, work, come home, and then sleep. That is why the G1 phase is referred to as the gap or growth phase.
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="24" name="HelveticaNeue-Thin"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="S Phase">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+
+The S Phase is known as the Synthesis phase because the cell copies the DNA in this stage. The DNA is the code and instructions that allow cells to start, function, and grow. This takes place after the cell is sent the signal to divide.
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="24" name="HelveticaNeue-Thin"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">G2 Phase
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="24" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">The G2 Phase is when a cell grows and fabricates more protein right before mitosis as a preparation. 
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="24" name="HelveticaNeue-Thin"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">G0 Phase
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="24" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+While the G0 phase is not listed, it is an extremely important phase in the life of a cell because of it's infinite time period and the fact that the cells does absolutely nothing. The G0 phase is when a cell is infinitely stuck in a G1 phase. Most times, a cell in G0 phase can be taken out by signals and sometimes are stuck permanently in the G0 phase, such as muscle cells. </string>
+                                        <attributes>
+                                            <font key="NSFont" size="24" name="HelveticaNeue-Thin"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interphase" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OTR-nG-duL">
+                                <rect key="frame" x="203" y="20" width="194" height="46"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="38"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cap-Ry-lF5">
+                                <rect key="frame" x="20" y="562" width="41" height="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="popoverPresentation" popoverAnchorView="cap-Ry-lF5" id="C0B-dZ-b4l">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yB9-eR-03z">
+                                <rect key="frame" x="535" y="562" width="50" height="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Images"/>
+                                <connections>
+                                    <segue destination="UIt-Nn-VWU" kind="presentation" modalTransitionStyle="flipHorizontal" id="f80-Kx-gUQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="yB9-eR-03z" secondAttribute="trailing" constant="-5" id="19H-QN-6lM"/>
+                            <constraint firstItem="Pju-I6-MC9" firstAttribute="centerX" secondItem="Md6-4W-vwS" secondAttribute="centerX" id="1Va-Hq-dQm"/>
+                            <constraint firstItem="cap-Ry-lF5" firstAttribute="leading" secondItem="Md6-4W-vwS" secondAttribute="leadingMargin" constant="-17" id="1lM-17-8f0"/>
+                            <constraint firstItem="Pju-I6-MC9" firstAttribute="top" secondItem="V5P-T1-gPj" secondAttribute="bottom" constant="8" id="2uT-DN-8Xs"/>
+                            <constraint firstItem="V5P-T1-gPj" firstAttribute="centerX" secondItem="Md6-4W-vwS" secondAttribute="centerX" id="5Gw-Cb-zyE"/>
+                            <constraint firstItem="OTR-nG-duL" firstAttribute="top" secondItem="A3W-kD-gPm" secondAttribute="bottom" id="5Us-C0-FXy"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="cap-Ry-lF5" secondAttribute="leading" id="71J-GP-00f"/>
+                            <constraint firstItem="Wgp-E5-FfQ" firstAttribute="top" secondItem="V5P-T1-gPj" secondAttribute="bottom" constant="53" id="9ax-ff-7Kb"/>
+                            <constraint firstItem="Wgp-E5-FfQ" firstAttribute="top" secondItem="cap-Ry-lF5" secondAttribute="bottom" constant="8" id="CGN-kI-IKj"/>
+                            <constraint firstItem="OTR-nG-duL" firstAttribute="top" secondItem="A3W-kD-gPm" secondAttribute="bottom" id="DOQ-Wa-Hnb"/>
+                            <constraint firstItem="V5P-T1-gPj" firstAttribute="top" secondItem="OTR-nG-duL" secondAttribute="bottom" constant="8" id="GDa-PF-d8J"/>
+                            <constraint firstItem="V5P-T1-gPj" firstAttribute="top" secondItem="A3W-kD-gPm" secondAttribute="bottom" id="Jdr-Fg-uLV"/>
+                            <constraint firstItem="Wgp-E5-FfQ" firstAttribute="top" secondItem="yB9-eR-03z" secondAttribute="bottom" constant="8" id="Mme-fu-0Xv"/>
+                            <constraint firstItem="V5P-T1-gPj" firstAttribute="top" secondItem="OTR-nG-duL" secondAttribute="bottom" constant="8" id="MqL-Mn-lyG"/>
+                            <constraint firstItem="OTR-nG-duL" firstAttribute="top" secondItem="A3W-kD-gPm" secondAttribute="bottom" id="Myv-Zc-2Xc"/>
+                            <constraint firstItem="Wgp-E5-FfQ" firstAttribute="top" secondItem="cap-Ry-lF5" secondAttribute="bottom" id="Nuk-BO-QG4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="V5P-T1-gPj" secondAttribute="trailing" constant="-20" id="PmK-7K-85c"/>
+                            <constraint firstItem="OTR-nG-duL" firstAttribute="centerX" secondItem="Md6-4W-vwS" secondAttribute="centerX" id="X4c-dL-N0l"/>
+                            <constraint firstItem="V5P-T1-gPj" firstAttribute="leading" secondItem="Md6-4W-vwS" secondAttribute="leadingMargin" constant="-20" id="bhp-B0-YaN"/>
+                            <constraint firstItem="Wgp-E5-FfQ" firstAttribute="top" secondItem="Pju-I6-MC9" secondAttribute="bottom" constant="8" id="ehJ-Fq-cpU"/>
+                            <constraint firstItem="OTR-nG-duL" firstAttribute="centerX" secondItem="Md6-4W-vwS" secondAttribute="centerX" id="oOv-kM-b3R"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Jdr-Fg-uLV"/>
+                                <exclude reference="MqL-Mn-lyG"/>
+                                <exclude reference="DOQ-Wa-Hnb"/>
+                                <exclude reference="Myv-Zc-2Xc"/>
+                                <exclude reference="oOv-kM-b3R"/>
+                                <exclude reference="1lM-17-8f0"/>
+                                <exclude reference="Nuk-BO-QG4"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="THi-cC-JBr" appends="YES" id="TjQ-fg-CKn"/>
+                            <outletCollection property="gestureRecognizers" destination="jdG-oB-hLD" appends="YES" id="Jwn-ii-unv"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="InterphaseInfo" destination="V5P-T1-gPj" id="N4q-He-6fa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pLa-QI-RiJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="THi-cC-JBr">
+                    <connections>
+                        <action selector="presentMitosis:" destination="yUD-zg-6v9" id="XSa-Pl-YBc"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="jdG-oB-hLD">
+                    <connections>
+                        <action selector="presentCytokenisis:" destination="yUD-zg-6v9" id="Qhm-3I-a8Q"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="728" y="913"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gKM-ny-3Bl">
+            <objects>
+                <viewController id="UIt-Nn-VWU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7yj-Rj-G6T"/>
+                        <viewControllerLayoutGuide type="bottom" id="5wU-Ou-nXR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jcN-SM-dmv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Images" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSb-xc-4wV">
+                                <rect key="frame" x="234" y="20" width="133" height="46"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="38"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InterphaseMitosisBarCycle" translatesAutoresizingMaskIntoConstraints="NO" id="xdf-hm-ep9">
+                                <rect key="frame" x="20" y="74" width="560" height="239"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xdf-hm-ep9" secondAttribute="height" multiplier="347:148" id="ivo-di-it3"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StartInterphase" translatesAutoresizingMaskIntoConstraints="NO" id="wJH-2W-miO">
+                                <rect key="frame" x="20" y="321" width="560" height="336"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wJH-2W-miO" secondAttribute="height" multiplier="237:142" id="LSE-BK-hvR"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4V-3Q-EW7">
+                                <rect key="frame" x="20" y="562" width="34" height="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="yUD-zg-6v9" kind="presentation" modalTransitionStyle="flipHorizontal" id="Hfq-OC-Su2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="mSb-xc-4wV" firstAttribute="top" secondItem="7yj-Rj-G6T" secondAttribute="bottom" id="3i1-Y6-tPO"/>
+                            <constraint firstItem="wJH-2W-miO" firstAttribute="top" secondItem="xdf-hm-ep9" secondAttribute="bottom" constant="8" id="7w1-UC-AE5"/>
+                            <constraint firstItem="xdf-hm-ep9" firstAttribute="centerX" secondItem="jcN-SM-dmv" secondAttribute="centerX" id="AI5-uw-1ca"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="F4V-3Q-EW7" secondAttribute="leading" id="CsO-rl-HLn"/>
+                            <constraint firstItem="xdf-hm-ep9" firstAttribute="top" secondItem="mSb-xc-4wV" secondAttribute="bottom" constant="8" symbolic="YES" id="GEq-Y4-pPk"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="wJH-2W-miO" secondAttribute="leading" id="JGA-YE-Zqh"/>
+                            <constraint firstItem="wJH-2W-miO" firstAttribute="centerX" secondItem="jcN-SM-dmv" secondAttribute="centerX" id="Juy-90-DZq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wJH-2W-miO" secondAttribute="trailing" id="UTu-d5-6Qg"/>
+                            <constraint firstItem="5wU-Ou-nXR" firstAttribute="top" secondItem="F4V-3Q-EW7" secondAttribute="bottom" constant="8" id="V9h-MX-rd6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xdf-hm-ep9" secondAttribute="trailing" id="c8d-5P-sTC"/>
+                            <constraint firstItem="mSb-xc-4wV" firstAttribute="centerX" secondItem="jcN-SM-dmv" secondAttribute="centerX" id="ofo-3j-EsL"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="xdf-hm-ep9" secondAttribute="leading" id="zTP-cK-3V2"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fcN-pO-bFm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="709" y="1609"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fXE-jo-W5M">
+            <objects>
+                <viewController id="7DO-vo-2mK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NLx-of-Yvl"/>
+                        <viewControllerLayoutGuide type="bottom" id="lGT-pW-tCr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s7n-3D-1Dw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MitosisWorkflow" translatesAutoresizingMaskIntoConstraints="NO" id="EIN-WF-tSx">
+                                <rect key="frame" x="20" y="73" width="560" height="248"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EIN-WF-tSx" secondAttribute="height" multiplier="185:82" id="I4r-XV-Jfi"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiH-qe-Zy6">
+                                <rect key="frame" x="20" y="562" width="34" height="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="7lp-H7-i8v" kind="presentation" modalTransitionStyle="flipHorizontal" id="HKn-hC-Ug0"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MitosisMiosis" translatesAutoresizingMaskIntoConstraints="NO" id="Pyj-gE-9hu">
+                                <rect key="frame" x="20" y="329" width="560" height="299"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Pyj-gE-9hu" secondAttribute="height" multiplier="15:8" id="Ejm-TI-GQu"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Images" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjh-oo-iYS">
+                                <rect key="frame" x="234" y="28" width="133" height="46"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="38"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.85098039219999999" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="EIN-WF-tSx" firstAttribute="centerY" secondItem="s7n-3D-1Dw" secondAttribute="centerY" id="1ak-nU-7OB"/>
+                            <constraint firstItem="EIN-WF-tSx" firstAttribute="leading" secondItem="s7n-3D-1Dw" secondAttribute="leadingMargin" constant="-463" id="2Yq-7B-hQx"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="FiH-qe-Zy6" secondAttribute="leading" id="5zP-Cz-JnZ"/>
+                            <constraint firstItem="cjh-oo-iYS" firstAttribute="centerX" secondItem="s7n-3D-1Dw" secondAttribute="centerX" id="Bdp-WZ-DEc"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Pyj-gE-9hu" secondAttribute="leading" id="BgF-7b-xCH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Pyj-gE-9hu" secondAttribute="trailing" id="DRa-Wo-rgn"/>
+                            <constraint firstItem="Pyj-gE-9hu" firstAttribute="top" secondItem="EIN-WF-tSx" secondAttribute="bottom" constant="8" id="QZD-Vv-woc"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="EIN-WF-tSx" secondAttribute="leading" id="SVR-dn-L2P"/>
+                            <constraint firstItem="cjh-oo-iYS" firstAttribute="top" secondItem="NLx-of-Yvl" secondAttribute="bottom" constant="8" id="Tsi-dY-99a"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EIN-WF-tSx" secondAttribute="trailing" id="XsQ-vO-bRm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EIN-WF-tSx" secondAttribute="trailing" id="jQZ-AR-vSh"/>
+                            <constraint firstItem="Pyj-gE-9hu" firstAttribute="centerX" secondItem="EIN-WF-tSx" secondAttribute="centerX" id="mpz-r0-8ra"/>
+                            <constraint firstItem="lGT-pW-tCr" firstAttribute="top" secondItem="FiH-qe-Zy6" secondAttribute="bottom" constant="8" id="tu5-pF-71O"/>
+                            <constraint firstItem="EIN-WF-tSx" firstAttribute="top" secondItem="cjh-oo-iYS" secondAttribute="bottom" constant="-1" id="vIq-ug-ir2"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1ak-nU-7OB"/>
+                                <exclude reference="2Yq-7B-hQx"/>
+                                <exclude reference="jQZ-AR-vSh"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XyG-JM-d9d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1364" y="1578"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="BdE-QT-5VH">
+            <objects>
+                <viewController id="v1j-f7-k1h" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c4f-Q2-2VF"/>
+                        <viewControllerLayoutGuide type="bottom" id="h0f-N5-Yrw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="J3K-QO-zgl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K36-MW-ebj">
+                                <rect key="frame" x="20" y="562" width="34" height="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="gdY-P0-OZg" kind="presentation" modalTransitionStyle="flipHorizontal" id="Tmx-bf-vlG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Images" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Qt-CD-DUB">
+                                <rect key="frame" x="234" y="28" width="133" height="46"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="38"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CellDividingGreen" translatesAutoresizingMaskIntoConstraints="NO" id="G23-sh-WNe">
+                                <rect key="frame" x="20" y="82" width="560" height="299"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="G23-sh-WNe" secondAttribute="height" multiplier="15:8" id="kKP-9T-fPL"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NewCellWall" translatesAutoresizingMaskIntoConstraints="NO" id="dCf-jz-ge8">
+                                <rect key="frame" x="20" y="389" width="560" height="299"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dCf-jz-ge8" secondAttribute="height" multiplier="15:8" id="rxd-g9-K4S"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.58039215690000001" green="0.3921568627" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="G23-sh-WNe" secondAttribute="leading" id="0RK-Ci-qQP"/>
+                            <constraint firstItem="G23-sh-WNe" firstAttribute="centerX" secondItem="J3K-QO-zgl" secondAttribute="centerX" id="3F4-c3-QSQ"/>
+                            <constraint firstItem="1Qt-CD-DUB" firstAttribute="centerX" secondItem="J3K-QO-zgl" secondAttribute="centerX" id="5Nf-z3-iio"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="dCf-jz-ge8" secondAttribute="leading" id="Atc-k0-wGO"/>
+                            <constraint firstItem="h0f-N5-Yrw" firstAttribute="top" secondItem="K36-MW-ebj" secondAttribute="bottom" constant="8" id="SAs-ex-JLL"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="K36-MW-ebj" secondAttribute="leading" id="Tlv-OA-J58"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dCf-jz-ge8" secondAttribute="trailing" id="XZg-HT-3Zq"/>
+                            <constraint firstItem="G23-sh-WNe" firstAttribute="top" secondItem="1Qt-CD-DUB" secondAttribute="bottom" constant="8" id="Ztc-Ls-cqh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="G23-sh-WNe" secondAttribute="trailing" id="nId-Ba-9gY"/>
+                            <constraint firstItem="1Qt-CD-DUB" firstAttribute="top" secondItem="c4f-Q2-2VF" secondAttribute="bottom" constant="8" id="wwe-Iq-5Qa"/>
+                            <constraint firstItem="dCf-jz-ge8" firstAttribute="top" secondItem="G23-sh-WNe" secondAttribute="bottom" constant="8" id="zp2-dz-TEP"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kqd-Co-NOS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2116" y="1609"/>
+        </scene>
+        <!--Mitosis View Controller-->
+        <scene sceneID="YyZ-Pd-q39">
+            <objects>
+                <viewController storyboardIdentifier="Mitosis" id="7lp-H7-i8v" customClass="MitosisViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BPF-Ed-Z4J"/>
+                        <viewControllerLayoutGuide type="bottom" id="nrC-dm-Cs2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GLz-wL-wtB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="xoC-tq-609">
+                                <rect key="frame" x="281" y="555" width="39" height="37"/>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mitosis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="en3-en-0HN">
+                                <rect key="frame" x="234" y="20" width="132" height="46"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="38"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BI2-wf-Q8C">
+                                <rect key="frame" x="0.0" y="74" width="600" height="473"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.85098039219999999" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Main Definition: is the process by which the nucleus of a cell is divided into two nuclei, each with the same number and kinds of chromosomes as the parent cell.
+
+First, we need to jot down some basic vocabulary: 
+	-Chromosomes
+		-Only can be seen during mitosis
+		-Made up of chromatin (DNA and Proteins)
+		-Each cell has a specific number
+		-Each chromosome is made up of two identical chromatids at the centromere
+
+There are four main subsets of mitosis:
+	-Prophase
+	-Metaphase
+	-Anaphase
+	-Telophase
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="26" name="HelveticaNeue-Thin"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Prophase
+	</string>
+                                        <attributes>
+                                            <font key="NSFont" size="26" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">-Longest phase of mitosis
+	-Chromosomes start showing coils
+	-Centrioles move to opposite sides
+	-Forming spindle fibers
+	-Nucleolus is gone
+	-Nuclear envelope also breaks down.
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="26" name="HelveticaNeue-Thin"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Metaphase
+	</string>
+                                        <attributes>
+                                            <font key="NSFont" size="26" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">-Shortest phase of mitosis
+	-Chromosomes are coiled and lined up in the middle of the cell
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="26" name="HelveticaNeue-Thin"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Anaphase
+	</string>
+                                        <attributes>
+                                            <font key="NSFont" size="26" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">-Begins when identical chromatids start separating
+	-Chromatids move to opposite ends, which then causes the end of anaphase
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="26" name="HelveticaNeue-Thin"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Telophase
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="26" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">	-Chromatids fully uncoil
+	-Two nuclear envelopes form
+	-Nucleoli become visible
+	-Now the end of mitosis, but not the cell cycle.</string>
+                                        <attributes>
+                                            <font key="NSFont" size="26" name="HelveticaNeue-Thin"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4KN-Yw-7NA">
+                                <rect key="frame" x="20" y="562" width="41" height="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="popoverPresentation" popoverAnchorView="4KN-Yw-7NA" id="Fkh-eK-0D9">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJk-hg-WCg">
+                                <rect key="frame" x="530" y="562" width="50" height="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Images"/>
+                                <connections>
+                                    <segue destination="7DO-vo-2mK" kind="presentation" modalTransitionStyle="flipHorizontal" id="rOE-87-Bwe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99215686274509807" green="0.85098039215686272" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="4KN-Yw-7NA" secondAttribute="leading" id="5IR-Ns-9Za"/>
+                            <constraint firstItem="BI2-wf-Q8C" firstAttribute="leading" secondItem="GLz-wL-wtB" secondAttribute="leadingMargin" constant="-20" id="9DS-Dc-jP8"/>
+                            <constraint firstItem="BI2-wf-Q8C" firstAttribute="top" secondItem="en3-en-0HN" secondAttribute="bottom" constant="8" id="C48-X1-U2e"/>
+                            <constraint firstItem="en3-en-0HN" firstAttribute="centerX" secondItem="GLz-wL-wtB" secondAttribute="centerX" id="Iid-yp-Z29"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XJk-hg-WCg" secondAttribute="trailing" id="KgM-GL-BJK"/>
+                            <constraint firstItem="nrC-dm-Cs2" firstAttribute="top" secondItem="xoC-tq-609" secondAttribute="bottom" constant="8" id="M4W-Sm-dse"/>
+                            <constraint firstItem="xoC-tq-609" firstAttribute="top" secondItem="BI2-wf-Q8C" secondAttribute="bottom" constant="8" id="SNH-ct-J5a"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="4KN-Yw-7NA" secondAttribute="leading" id="b1g-oe-QQz"/>
+                            <constraint firstItem="nrC-dm-Cs2" firstAttribute="top" secondItem="XJk-hg-WCg" secondAttribute="bottom" constant="8" id="c9q-AD-fmd"/>
+                            <constraint firstItem="BI2-wf-Q8C" firstAttribute="centerX" secondItem="GLz-wL-wtB" secondAttribute="centerX" id="dMq-yZ-ymS"/>
+                            <constraint firstItem="en3-en-0HN" firstAttribute="top" secondItem="BPF-Ed-Z4J" secondAttribute="bottom" id="lps-iD-FPF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BI2-wf-Q8C" secondAttribute="trailing" constant="-20" id="oR4-pY-Oea"/>
+                            <constraint firstItem="xoC-tq-609" firstAttribute="centerX" secondItem="GLz-wL-wtB" secondAttribute="centerX" id="ohz-U3-sGW"/>
+                            <constraint firstItem="nrC-dm-Cs2" firstAttribute="top" secondItem="4KN-Yw-7NA" secondAttribute="bottom" constant="8" id="xGf-Od-wD3"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="b1g-oe-QQz"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ek3-gQ-yFM" appends="YES" id="kyb-3o-6Qu"/>
+                            <outletCollection property="gestureRecognizers" destination="6u7-2M-H9G" appends="YES" id="ndf-XI-BWv"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="MitosisInfo" destination="BI2-wf-Q8C" id="Q3S-jk-bn3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1bp-9N-myD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="ek3-gQ-yFM">
+                    <connections>
+                        <action selector="presentCytokenisis:" destination="7lp-H7-i8v" id="4Ly-Qj-wPP"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="6u7-2M-H9G">
+                    <connections>
+                        <action selector="presentInterphase:" destination="7lp-H7-i8v" id="cA0-Gn-stQ"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1369" y="890"/>
+        </scene>
+        <!--Cytokenisis View Controller-->
+        <scene sceneID="BfN-L6-YBS">
+            <objects>
+                <viewController storyboardIdentifier="Cytokenisis" id="gdY-P0-OZg" customClass="CytokenisisViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c81-9f-DWW"/>
+                        <viewControllerLayoutGuide type="bottom" id="HTf-2w-d0S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HA2-Es-sjz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="k0H-NT-B48">
+                                <rect key="frame" x="281" y="555" width="39" height="37"/>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cytokinesis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37z-y0-BuO">
+                                <rect key="frame" x="194" y="20" width="212" height="46"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="38"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bha-Vg-llw">
+                                <rect key="frame" x="0.0" y="74" width="600" height="473"/>
+                                <color key="backgroundColor" red="0.58039215690000001" green="0.3921568627" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Main Definition: is the process by which the cytoplasm divides forming two distinct cells.
+
+Cytokinesis immediatley follows mitosis in which the physical cytoplasm divides and two cells are formed.
+
+Vesicles that have glucose are to meet up at the middle of the cell. These vesicles will join and fuse together to become the almighty cell wall that is temporarily holding together and operating the two cells at the same time.</string>
+                                        <attributes>
+                                            <font key="NSFont" size="26" name="HelveticaNeue-Thin"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFY-W5-Cm4">
+                                <rect key="frame" x="20" y="562" width="41" height="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="popoverPresentation" popoverAnchorView="oFY-W5-Cm4" id="L8i-hF-48j">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="taZ-7C-WYj">
+                                <rect key="frame" x="530" y="559" width="50" height="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Images"/>
+                                <connections>
+                                    <segue destination="v1j-f7-k1h" kind="presentation" modalTransitionStyle="flipHorizontal" id="VfN-bI-9uP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.58039215686274515" green="0.39215686274509803" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="bha-Vg-llw" firstAttribute="leading" secondItem="HA2-Es-sjz" secondAttribute="leadingMargin" constant="-20" id="4nq-HN-j8t"/>
+                            <constraint firstItem="HTf-2w-d0S" firstAttribute="top" secondItem="k0H-NT-B48" secondAttribute="bottom" constant="8" id="Ceq-pW-e2i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="taZ-7C-WYj" secondAttribute="trailing" id="DtO-3v-HFI"/>
+                            <constraint firstItem="37z-y0-BuO" firstAttribute="centerX" secondItem="HA2-Es-sjz" secondAttribute="centerX" id="LQV-eV-Teh"/>
+                            <constraint firstItem="37z-y0-BuO" firstAttribute="top" secondItem="c81-9f-DWW" secondAttribute="bottom" id="Ngt-3v-Lzf"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="oFY-W5-Cm4" secondAttribute="leading" id="Pfo-sx-530"/>
+                            <constraint firstItem="HTf-2w-d0S" firstAttribute="top" secondItem="oFY-W5-Cm4" secondAttribute="bottom" constant="8" id="eJk-5h-bXN"/>
+                            <constraint firstItem="k0H-NT-B48" firstAttribute="centerX" secondItem="HA2-Es-sjz" secondAttribute="centerX" id="hAA-VG-5fj"/>
+                            <constraint firstItem="k0H-NT-B48" firstAttribute="top" secondItem="bha-Vg-llw" secondAttribute="bottom" constant="8" id="hwY-Jy-unq"/>
+                            <constraint firstItem="bha-Vg-llw" firstAttribute="centerX" secondItem="HA2-Es-sjz" secondAttribute="centerX" id="kw7-6w-kDK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bha-Vg-llw" secondAttribute="trailing" constant="-20" id="l5W-LI-TWV"/>
+                            <constraint firstItem="HTf-2w-d0S" firstAttribute="top" secondItem="taZ-7C-WYj" secondAttribute="bottom" constant="11" id="scG-zR-Yw7"/>
+                            <constraint firstItem="bha-Vg-llw" firstAttribute="top" secondItem="37z-y0-BuO" secondAttribute="bottom" constant="8" id="yhP-AD-fNc"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="HTU-Fj-CvC" appends="YES" id="CBP-Lm-kBm"/>
+                            <outletCollection property="gestureRecognizers" destination="y8R-ma-t4E" appends="YES" id="UZ6-mV-dCc"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="CytokinesisInfo" destination="bha-Vg-llw" id="EJl-FL-Ulv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OWz-jy-knV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="HTU-Fj-CvC">
+                    <connections>
+                        <action selector="presentInterphase:" destination="gdY-P0-OZg" id="3Cd-Up-Xhb"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="y8R-ma-t4E">
+                    <connections>
+                        <action selector="presentMitosis:" destination="gdY-P0-OZg" id="Hv2-F4-qGX"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2038" y="873"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CellCycleOverview" width="2000" height="2043"/>
+        <image name="CellDividingGreen" width="2000" height="1379"/>
+        <image name="InterphaseMitosisBarCycle" width="508" height="149"/>
+        <image name="MitosisMiosis" width="1603" height="1134"/>
+        <image name="MitosisWorkflow" width="1023" height="372"/>
+        <image name="NewCellWall" width="2000" height="1227"/>
+        <image name="StartInterphase" width="2000" height="1257"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Tmx-bf-vlG"/>
+        <segue reference="HKn-hC-Ug0"/>
+        <segue reference="Fkh-eK-0D9"/>
+        <segue reference="cML-cL-ddS"/>
+        <segue reference="Hfq-OC-Su2"/>
+    </inferredMetricsTieBreakers>
+</document>
